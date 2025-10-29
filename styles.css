@@ -7,12 +7,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background-image: url(images/img3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  cursor: pointer;
+  overflow-x: hidden;
 }
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -56,20 +52,6 @@ body {
   color: #12a4b8;
 }
 
-@media (max-width: 768px) {
-  .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 2% 5%;
-  }
-
-  .navlink {
-    flex-wrap: wrap;
-    gap: 15px;
-    margin-top: 10px;
-  }
-}
-
 .section1 {
   height: 100vh;
   width: 100%;
@@ -84,7 +66,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-
   color: white;
   font-weight: bold;
   font-family: Arial, Helvetica, sans-serif;
@@ -119,7 +100,7 @@ body {
   line-height: 1.6;
   max-width: 700px;
   margin-bottom: 2rem;
-  animation: fadeUp 1s ease forwards;
+  animation: xc vfadeUp 1s ease forwards;
   animation-delay: 0.3s;
 }
 
@@ -595,5 +576,50 @@ footer {
 
   .footersection input {
     width: 100%;
+  }
+}
+@media (min-width: 568px) and (max-width: 767px) {
+  .section3 img {
+    max-width: 70%;
+  }
+}
+@media (min-width: 320px) and (max-width: 567px) {
+  .section3 {
+    padding: 2rem;
+  }
+  .section3 img {
+    max-width: 100%;
+  }
+  .section4 {
+    padding: 3rem 1rem;
+  }
+  .section4table {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .section4table h2 {
+    font-size: 2rem;
+  }
+  .timetable {
+    font-size: 0.9rem;
+  }
+  .timetable th,
+  .timetable td {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2% 5%;
+  }
+
+  .navlink {
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 10px;
   }
 }
